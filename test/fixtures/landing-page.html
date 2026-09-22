@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Emergency plumbers in London | Demo landing page</title>
+
+  <!--
+    Self referencing canonical, written relatively so that this page is "canonical
+    to itself" whatever host you serve it from. Together with the lead form and a
+    click ID in the URL this triggers the indexing warning.
+  -->
+  <link rel="canonical" href="landing-page.html">
+
+  <!--
+    Google tag. When you open this file offline the request fails, which does not
+    matter: the checker reads the script source attribute, not the loaded script.
+    That is deliberately the point of the demo, because a Google tag that is present
+    in the markup but never writes _gcl_aw is the single most common cause of
+    unattributable leads.
+  -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-123456789"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+
+    /* Consent Mode v2 default: everything denied until the banner is accepted. */
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      wait_for_update: 500
+    });
+
+    gtag('js', new Date());
+    gtag('config', 'AW-123456789');
+  </script>
+
+  <style>
+    :root { color-scheme: light; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      color: #1C1B1A;
+      line-height: 1.5;
+    }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 32px 20px 64px; }
+    header { background: #FAF8F6; border-bottom: 1px solid #E5E1DC; }
+    h1 { font-size: 28px; margin: 0 0 8px; }
+    h2 { font-size: 18px; margin: 32px 0 8px; }
+    .lede { color: #57534E; margin: 0; }
+    .card { border: 1px solid #E5E1DC; border-radius: 8px; padding: 20px; margin-top: 16px; }
+    label { display: block; font-size: 13px; font-weight: 600; margin: 12px 0 4px; }
+    input[type=text], input[type=email], input[type=tel], textarea {
+      width: 100%; padding: 8px 10px; border: 1px solid #D6D1CB; border-radius: 4px; font: inherit;
+    }
+    button {
+      margin-top: 14px; padding: 9px 16px; border: 0; border-radius: 6px;
+      background: #E4572E; color: #fff; font: inherit; font-weight: 600; cursor: pointer;
+    }
+    .note { font-size: 13px; color: #57534E; background: #FAF8F6; border-left: 3px solid #E4572E; padding: 10px 12px; }
+    code { background: #F1EEEA; padding: 1px 4px; border-radius: 3px; }
+    .banner { background: #1C1B1A; color: #fff; padding: 12px 20px; font-size: 13px; }
+    .banner button { margin: 0 0 0 10px; padding: 5px 12px; }
+  </style>
+</head>
+<body>
+  <div class="banner">
+    This demo page sets a Consent Mode default of denied. Nothing grants it, which is exactly the bug the checker is looking for.
+  </div>
+
+  <header>
+    <div class="wrap" style="padding-bottom:24px">
+      <h1>Emergency plumbers in London</h1>
+      <p class="lede">Demo landing page for the Fire Pixel Click ID Checker. Not a real business.</p>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <p class="note">
+      Open this page with <code>?gclid=TEST</code> on the end of the URL, then open the extension.
+      You should see: the click ID found, <code>_gcl_aw</code> missing, Consent Mode denying
+      <code>ad_storage</code>, the contact form hidden field empty, and the newsletter form
+      capturing nothing at all.
+    </p>
+
+    <h2>Contact form (Contact Form 7 markup, hidden field never populated)</h2>
+    <div class="wpcf7" id="wpcf7-f42-p7-o1">
+      <form id="contact-form" class="wpcf7-form" action="/thank-you" method="post">
+        <!--
+          The hidden field exists, which is where most sites stop. Nothing on this page
+          copies the gclid from the query string into it, so it submits empty.
+        -->
+        <input type="hidden" name="gclid" id="gclid" value="">
+        <input type="hidden" name="utm_source" id="utm_source" value="">
+        <input type="hidden" name="page_url" value="/plumbers-london/">
+
+        <label for="fullname">Your name</label>
+        <input type="text" id="fullname" name="your-name" autocomplete="name">
+
+        <label for="email">Email address</label>
+        <input type="email" id="email" name="your-email" autocomplete="email">
+
+        <label for="phone">Telephone</label>
+        <input type="tel" id="phone" name="your-phone" autocomplete="tel">
+
+        <label for="message">What do you need?</label>
+        <textarea id="message" name="your-message" rows="3"></textarea>
+
+        <button type="submit">Request a call back</button>
+      </form>
+    </div>
+
+    <h2>Newsletter form (no hidden fields at all)</h2>
+    <div class="card">
+      <form id="newsletter-form" action="/subscribe" method="post">
+        <label for="news-email">Email address</label>
+        <input type="email" id="news-email" name="email" autocomplete="email">
+        <button type="submit">Send me the guide</button>
+      </form>
+    </div>
+
+    <h2>Call us</h2>
+    <div class="card">
+      <p>Ring <a href="tel:+442079460000">020 7946 0000</a> for a same day visit.</p>
+      <p class="lede">No call tracking on this number, so a telephone lead carries no click ID.</p>
+    </div>
+  </div>
+</body>
+</html>

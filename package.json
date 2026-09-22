@@ -1,0 +1,18 @@
+{
+  "name": "firepixel-click-id-checker",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Chrome extension (MV3) that checks whether a landing page keeps the Google Ads or Microsoft Ads click ID.",
+  "author": "Ben Luong, CopperChunk Limited, trading as Fire Pixel",
+  "license": "UNLICENSED",
+  "homepage": "https://firepixel.co.uk",
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "test:browser": "node --test test/browser.test.js",
+    "assets": "python3 tools/make-assets.py",
+    "lint:syntax": "node --check popup/popup.js && node --check src/snapshot.js && node --check src/analyse.js",
+    "zip": "rm -f dist/firepixel-click-id-checker-1.0.0.zip && mkdir -p dist && zip -r -X dist/firepixel-click-id-checker-1.0.0.zip manifest.json src popup icons -x '*.DS_Store' '*/.*'",
+    "verify": "node tools/verify.mjs"
+  }
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <title>Click ID Checker</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header class="header">
+    <span class="mark" aria-hidden="true"></span>
+    <div class="header-text">
+      <h1>Click ID Checker</h1>
+      <p class="byline">Fire Pixel</p>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="status" class="status">
+      <p class="status-text">Scanning this page&hellip;</p>
+    </section>
+
+    <section id="verdict" class="verdict" hidden>
+      <p class="verdict-label" id="verdict-label"></p>
+      <p class="verdict-detail" id="verdict-detail"></p>
+      <p class="verdict-url" id="verdict-url"></p>
+      <ul class="tally" id="tally"></ul>
+    </section>
+
+    <section id="detected" class="detected" hidden>
+      <h2>Detected on the page</h2>
+      <p id="detected-list"></p>
+    </section>
+
+    <ol id="checks" class="checks" hidden></ol>
+  </main>
+
+  <div class="actions">
+    <button id="scan" type="button" class="button button-primary">Scan this page</button>
+    <button id="test-click-id" type="button" class="button" hidden>Reload with a test click ID</button>
+    <button id="copy" type="button" class="button" hidden>Copy report</button>
+  </div>
+
+  <p id="fallback-url" class="fallback" hidden></p>
+
+  <footer class="footer">
+    <a id="link-scan" href="https://firepixel.co.uk/tools/google-ads-signal-plan" target="_blank" rel="noreferrer noopener">Free Google Ads Signal Plan scan</a>
+    <span aria-hidden="true">&middot;</span>
+    <a id="link-privacy" href="https://firepixel.co.uk/extension-privacy" target="_blank" rel="noreferrer noopener">Privacy</a>
+  </footer>
+
+  <script type="module" src="popup.js"></script>
+</body>
+</html>
