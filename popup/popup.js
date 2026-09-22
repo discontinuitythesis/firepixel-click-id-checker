@@ -228,8 +228,14 @@ async function scan() {
   }
 
   try {
+    /*
+     * world: 'MAIN' matters. The default isolated world cannot see the page's
+     * own JavaScript globals, so window.dataLayer would always look absent and
+     * the Consent Mode check could never read a consent command.
+     */
     const results = await chrome.scripting.executeScript({
       target: { tabId: tab.id },
+      world: 'MAIN',
       func: collectSnapshot
     });
     const snapshot = results && results[0] ? results[0].result : null;

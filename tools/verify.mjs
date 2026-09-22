@@ -114,6 +114,12 @@ wanted.forEach((id) => {
 });
 ok(`popup.js looks up ${wanted.length} element ids and all of them exist in popup.html`);
 
+if (!/world:\s*'MAIN'/.test(popupJs)) {
+  fail("popup.js must call executeScript with world: 'MAIN', otherwise window.dataLayer is invisible to the snapshot");
+} else {
+  ok("executeScript runs collectSnapshot in the page's main world, so the dataLayer is readable");
+}
+
 if (!/<script type="module" src="popup\.js">/.test(popupHtml)) {
   fail('popup.html must load popup.js as a module');
 }
