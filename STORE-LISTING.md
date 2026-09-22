@@ -101,8 +101,8 @@ Language: English (United Kingdom).
 
 Five screenshots at 1280x800. Captions, in order:
 
-1. **One click gives a verdict: Attributable, Attributable with gaps, or Not attributable as-is.**
-2. **The click ID reached the page but the Google tag never wrote _gcl_aw, and the report says why.**
+1. **The click ID reached the page but the Google tag never wrote _gcl_aw: Not attributable as-is, and the report says why.**
+2. **The same page fixed. Cookie written, hidden field populated, consent granted: Attributable.**
 3. **Consent Mode read straight from the dataLayer, including the Consent Mode v2 signals.**
 4. **Every form on the page checked for a hidden click ID field, with advice for the form builder it detects.**
 5. **Copy the whole report as Markdown and send it to whoever has to fix it.**
