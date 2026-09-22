@@ -119,6 +119,6 @@ CopperChunk Limited, trading as Fire Pixel
 Email: ben@firepixel.co.uk
 Web: https://firepixel.co.uk
 
-CopperChunk Limited is registered in England and Wales. The registered company number and
-registered office address are published on the Chrome Web Store listing in line with the
-EU Digital Services Act trader requirements.
+CopperChunk Limited is a private limited company registered in the Republic of Ireland
+(company number 576053). The registered office address is published on the Chrome Web
+Store listing in line with the EU Digital Services Act trader requirements.

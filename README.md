@@ -9,7 +9,9 @@ the first party cookie the tag should have written, the Consent Mode state that 
 explains a missing cookie, the hidden fields on the forms, the redirect chain, the
 Microsoft UET tag and telephone leads.
 
-Built by Ben Luong for Fire Pixel (firepixel.co.uk), trading as CopperChunk Limited.
+Built by Ben Luong for Fire Pixel (firepixel.co.uk), the trading name of CopperChunk Limited,
+a private limited company registered in the Republic of Ireland (company number 576053).
+Contact: ben@firepixel.co.uk. Privacy policy: https://firepixel.co.uk/extension-privacy.
 
 - Store name: Click ID Checker for Google & Microsoft Ads
 - Version: 1.0.0

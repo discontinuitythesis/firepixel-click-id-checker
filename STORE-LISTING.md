@@ -226,4 +226,5 @@ disclose.
 - Publisher: verify `firepixel.co.uk` so the listing carries the verified publisher mark.
 - Trader status: **trader**. CopperChunk Limited supplies services commercially, so under
   the EU Digital Services Act the listing must publish a physical address and a telephone
-  number. Use the CopperChunk Limited registered address.
+  number. Use the CopperChunk Limited registered office address. CopperChunk Limited is a
+  private limited company registered in the Republic of Ireland (company number 576053).
