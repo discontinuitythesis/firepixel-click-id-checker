@@ -179,7 +179,7 @@ popup/popup.html         popup markup
 popup/popup.css          popup styles
 popup/popup.js           popup controller, ES module
 icons/                   16, 32, 48 and 128 pixel PNGs
-store/                   promo tile, screenshot placeholder, a real popup render
+store/                   promo tile, the five store screenshots, a real popup render
 test/analyse.test.js     30 unit tests over the rules
 test/browser.test.js     end to end snapshot test in Chromium, skips without Playwright
 test/fixtures/           the demo landing page
@@ -201,11 +201,11 @@ reference anything outside itself: no imports, no module level helpers, no closu
 3. `npm run zip` produces `dist/firepixel-click-id-checker-1.0.0.zip` containing only
    `manifest.json`, `src/`, `popup/` and `icons/`. Nothing else ships: no tests, no
    fixtures, no tools, no store artwork, no documentation.
-4. Take five real screenshots at 1280x800 and replace
-   `store/screenshot-1280x800-PLACEHOLDER.png`. Use the demo landing page or a site you
-   own. Do not put a client site, a real account number or anyone's personal data in the
-   frame. `store/popup-render.png` is a genuine capture of the popup on the demo page and
-   is a reasonable starting point.
+4. The five store screenshots are `store/screenshot-1.png` to `store/screenshot-5.png`,
+   1280x800, taken on the demo landing page. If you retake them, use the demo landing page
+   or a site you own. Do not put a client site, a real account number or anyone's personal
+   data in the frame. `store/popup-render.png` is a genuine capture of the popup on the
+   demo page.
 5. Chrome Web Store developer dashboard, one time setup:
    - Pay the one off five dollar registration fee from a dedicated Fire Pixel email
      address. That address is permanent.
